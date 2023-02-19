@@ -20,12 +20,6 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-route::group(['middleware' => ['auth']], function () {
-
-
-// Route::get('/2', [DashboardController::class, 'index2']);
-// Route::get('/dashboard2', [DashboardController::class, 'index2']);
-});
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'gas']);
@@ -83,12 +77,7 @@ Route::post('/store1', [TransaksiController::class, 'store1']);
 
 // route::group(['middleware' => ['auth','login:owner']], function () {
 
-// // Pelanggan
-// Route::get('/pelanggan', [PelangganController::class, 'index1']);
-// Route::get('/pelanggan/create', [PelangganController::class, 'create1']);
-// Route::resource('/pelanggan', PelangganController::class);
+// Route::get('/2', [DashboardController::class, 'index2']);
+// Route::get('/dashboard2', [DashboardController::class, 'index2']);
 
-// // Transaksi
-// Route::get('/transaksi1', [TransaksiController::class, 'index1']);
-// Route::post('/store1', [TransaksiController::class, 'store1']);
 // });
