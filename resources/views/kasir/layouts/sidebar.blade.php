@@ -51,35 +51,15 @@
                 <li class="sidebar-title">Menu</li>
 
                 <li class="sidebar-item {{ ($title === 'Dashboard') ? 'active' : '' }} ">
-                    <a href="/" class='sidebar-link'>
+                    <a href="/1" class='sidebar-link'>
                         <i class="fa-solid fa-house-chimney"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item {{ ($title === 'Outlet') ? 'active' : '' }}">
-                    <a href="/outlet" class='sidebar-link'>
-                        <i class="fa-solid fa-store"></i>
-                        <span>Kelola Outlet</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item {{ ($title === 'Pengguna') ? 'active' : '' }}">
-                    <a href="/user" class='sidebar-link'>
-                        <i class="fa-solid fa-user-group"></i>
-                        <span>Kelola Pengguna</span>
-                    </a>
-                </li>
-
-                <li class="sidebar-item {{ ($title === 'Paket') ? 'active' : '' }}">
-                    <a href="/paket" class='sidebar-link'>
-                        <i class="fa-solid fa-boxes-packing"></i>
-                        <span>Kelola Paket</span>
-                    </a>
-                </li>
 
                 <li class="sidebar-item {{ ($title === 'Pelanggan') ? 'active' : '' }}">
-                    <a href="/pelanggan" class='sidebar-link'>
+                    <a href="/pelanggan1" class='sidebar-link'>
                         <i class="fa-solid fa-user"></i>
                         <span>Kelola Pelanggan</span>
                     </a>
@@ -92,7 +72,7 @@
                 </a>
                 <ul class="submenu ">
                     <li class="submenu-item {{ ($title === 'Transaksi') ? 'active' : '' }}">
-                        <a href="/transaksi">Transaksi</a>
+                        <a href="/transaksi1">Transaksi</a>
                     </li>
                     <li class="submenu-item {{ ($title === 'Riwayat') ? 'active' : '' }}">
                         <a href="component-badge.html">Riwayat Transaksi</a>

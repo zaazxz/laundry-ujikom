@@ -27,6 +27,17 @@ class TransaksiController extends Controller
         ]);
     }
 
+    public function index1()
+    {
+        return view('kasir.transaksi.index', [
+            'title' => 'Pembayaran',
+            'title' => 'Transaksi',
+            'deskripsi' => 'Halaman transaksi',
+            'pelanggans' => Pelanggan::all(),
+            'pakets' => Paket::all()
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -54,7 +65,7 @@ class TransaksiController extends Controller
         }
 
         $checking = Transaksi::where('id', $request->paket_id)->where('status', '0')->first();
-        
+
         if ($checking == null) {
             $transaksi = new Transaksi;
             $transaksi->pelanggan_id = $request->pelanggan_id;
@@ -64,7 +75,30 @@ class TransaksiController extends Controller
             $transaksi->qty = $request->qty;
         }
 
-        return view('dashboard.transaksi.index'); 
+        return view('dashboard.transaksi.index');
+    }
+    public function store1(Request $request)
+    {
+        if ($request->pelanggan_id == 0) {
+            return redirect('/transaksi1')->with('pesan','Anda belum memilih pelanggan');
+        }
+
+        if ($request->paket_id == 0) {
+            return redirect('/transaksi1')->with('pesan','Anda belum memilih paket');
+        }
+
+        $checking = Transaksi::where('id', $request->paket_id)->where('status', '0')->first();
+
+        if ($checking == null) {
+            $transaksi = new Transaksi;
+            $transaksi->pelanggan_id = $request->pelanggan_id;
+            $transaksi->paket_id = $request->paket_id;
+            $transaksi->user_id = $request->user_id;
+            $transaksi->outlet_id = $request->outlet_id;
+            $transaksi->qty = $request->qty;
+        }
+
+        return view('kasir.transaksi.index');
     }
 
     /**

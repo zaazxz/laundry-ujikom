@@ -1,4 +1,4 @@
-@extends('dashboard.layouts.main')
+@extends('kasir.layouts.main')
 
 @section('content')
     <div class="container">
@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-content">
                         <div class="card-body">
-                            <form class="form form-vertical" action="/store1" method="post">
+                            <form class="form form-vertical" action="/store" method="post">
                                 @csrf
                                 @method('POST')
                                 <div class="form-body">

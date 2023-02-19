@@ -21,4 +21,14 @@ class DashboardController extends Controller
             'outlet' => Outlet::count()
         ]);
     }
+    public function index1() {
+        return view('dashboardkasir', [
+            'title' => 'Dashboard',
+            'deskripsi' => 'Halaman berisi informasi singkat mengenai data-data di dalam sistem kasir Dry and Clean',
+            'user' => User::count(),
+            'pelanggan' => Pelanggan::count(),
+            'transaksi' => Transaksi::count(),
+            'outlet' => Outlet::count()
+        ]);
+    }
 }
