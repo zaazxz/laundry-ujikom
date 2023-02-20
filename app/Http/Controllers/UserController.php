@@ -50,8 +50,8 @@ class UserController extends Controller
         $data = $request->validate([
             'outlet_id' => 'required',
             'level' => 'required',
-            'username' => 'required|unique:users|max:10',
-            'password' => 'required',
+            'username' => 'required|unique:users',
+            'password' => 'required|min:8',
             'nama' => 'required',
             'gambar' => 'image|file|mimes:jpeg,png,jpg,gif,svg|max:20000'
         ]);
@@ -111,7 +111,8 @@ class UserController extends Controller
         $rules = [
             'outlet_id' => 'required',
             'level' => 'required',
-            'password' => 'required',
+            'username' => 'required',
+            'password' => 'required|min:8',
             'nama' => 'required',
             'gambar' => 'image|file|mimes:jpeg,png,jpg,gif,svg|max:20000'
         ];
@@ -133,7 +134,7 @@ class UserController extends Controller
 
         User::where('id', $user->id)
             ->update($validatedData);
-        
+
         if($validatedData) {
             return redirect('/user')->with(['success' => 'Data Berhasil Diubah!']);
         } else {
@@ -153,7 +154,7 @@ class UserController extends Controller
             Storage::delete($user->gambar);
         }
         User::destroy($user->id);
-        
+
         if($user) {
             return redirect('/user')->with(['success' => 'Data Berhasil Dihapus!']);
         } else {
