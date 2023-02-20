@@ -43,7 +43,7 @@
     {{-- Create Page --}}
     <div class="container">
         <div class="d-grid gap-2">
-            <a href="/laporan/create" style="color:white;" class="btn form-control bg-primary">
+            <a href="/transaksi" style="color:white;" class="btn form-control bg-primary">
                 <i class="fa-solid fa-plus"></i> Tambah
             </a>
         </div>
