@@ -45,22 +45,6 @@
             </div>
         </div>
 
-        {{-- Card Profile --}}
-        <div class="container ">
-            <div class="card p-0 mb-0 ">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="avatar avatar-xl">
-                            <img src="{{ asset('assets/images/faces/1.jpg') }}" alt="Face 1">
-                        </div>
-                        <div class=" ms-3 name">
-                            <h5 class="font-bold">@auth{{ auth()->user()->username }}@endauth</h5>
-                            <h6 class="text-muted mb-0">@auth{{ auth()->user()->level }}@endauth</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         {{-- Sidebar Content --}}
         <div class="sidebar-menu">
@@ -140,7 +124,22 @@
 
             </ul>
 
-
+{{-- Card Profile --}}
+<div class="container ">
+    <div class="card p-0 mb-0 ">
+        <div class="card-body">
+            <div class="d-flex align-items-center">
+                <div class="avatar avatar-xl">
+                    <img src="{{ asset('assets/images/faces/1.jpg') }}" alt="Face 1">
+                </div>
+                <div class=" ms-3 name">
+                    <h5 class="font-bold">@auth{{ auth()->user()->username }}@endauth</h5>
+                    <h6 class="text-muted mb-0">@auth{{ auth()->user()->level }}@endauth</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
     </div>
