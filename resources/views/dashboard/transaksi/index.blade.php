@@ -29,7 +29,7 @@
                                         </div>
                                         <div class="col-12">
                                             <div class="form-group">
-                                                <label for="paket_id">Pelanggan</label>
+                                                <label for="paket_id">Paket</label>
                                                 <select
                                                 name="paket_id"
                                                 id="paket_id"
@@ -108,11 +108,48 @@
                                         <div class="row">
                                             <div class="col-lg-12 my-1">
                                                 <div class="d-grid gap-2">
-                                                    <div class="button btn btn-primary">Detail</div>
+                                                    <button type="button"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModalCenter"
+                                                    aria-controls="exampleModalCenter"
+                                                    class="button btn btn-primary">Detail</button>
                                                 </div>
                                             </div>
 
                                         </div>
+                                        {{-- Modal --}}
+                                    <div class="modal fade" id="exampleModalCenter" tabindex="-1"
+                                        role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
+                                            role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalCenterTitle">
+                                                        \
+                                                    </h5>
+                                                    <button type="button" class="close" data-bs-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <i data-feather="x"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body text-start">
+                                                    <div class="mx-auto">
+
+                                                    </div>
+                                                    <hr>
+                                                    <ul>
+                                                        <li></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                                        <i class="bx bx-x d-block d-sm-none"></i>
+                                                        <span class="d-none d-sm-block">Close</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -123,7 +160,7 @@
                 <hr>
                 Total Pembayaran :
                 <hr>
-                <button class="btn btn-success">Order</button>
+                <button type="submit" class="btn btn-success">Order</button>
             </div>
 
         </div>

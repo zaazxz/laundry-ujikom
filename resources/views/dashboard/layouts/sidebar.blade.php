@@ -45,6 +45,23 @@
             </div>
         </div>
 
+        {{-- Card Profile --}}
+        <div class="container ">
+            <div class="card p-0 mb-0 ">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="avatar avatar-xl">
+                            <img src="{{ asset('assets/images/faces/1.jpg') }}" alt="Face 1">
+                        </div>
+                        <div class=" ms-3 name">
+                            <h5 class="font-bold">@auth{{ auth()->user()->username }}@endauth</h5>
+                            <h6 class="text-muted mb-0">@auth{{ auth()->user()->level }}@endauth</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         {{-- Sidebar Content --}}
         <div class="sidebar-menu">
             <ul class="menu">
@@ -85,7 +102,9 @@
                     </a>
                 </li>
 
-                <li class="sidebar-item  has-sub {{ ($title === 'Transaksi') ? 'active' : '' }}">
+                <li class="sidebar-item  has-sub
+                {{ ($title === 'Transaksi') ? 'active' : '' }}
+                {{ ($title === 'Riwayat') ? 'active' : '' }}">
                 <a href="#" class='sidebar-link'>
                     <i class="fa-solid fa-money-check-dollar"></i>
                     <span>Transaksi</span>
@@ -95,7 +114,7 @@
                         <a href="/transaksi">Transaksi</a>
                     </li>
                     <li class="submenu-item {{ ($title === 'Riwayat') ? 'active' : '' }}">
-                        <a href="component-badge.html">Riwayat Transaksi</a>
+                        <a href="/laporan">Riwayat Transaksi</a>
                     </li>
                 </ul>
 
@@ -121,22 +140,7 @@
 
             </ul>
 
-            {{-- Card Profile --}}
-            <div class="container d-flex justify-content-center">
-                <div class="card p-0 mb-0 border">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center">
-                            <div class="avatar avatar-xl">
-                                <img src="{{ asset('assets/images/faces/1.jpg') }}" alt="Face 1">
-                            </div>
-                            <div class="ms-3 name">
-                                <h5 class="font-bold">@auth{{ auth()->user()->username }}@endauth</h5>
-                                <h6 class="text-muted mb-0">@auth{{ auth()->user()->level }}@endauth</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
 
         </div>
     </div>

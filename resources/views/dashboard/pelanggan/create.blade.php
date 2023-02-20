@@ -17,6 +17,16 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group">
+                        <select name="jk" id="" class="form-select">
+                            <option value="pilih">Pilih</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+
+                        </select>
+                        </div>
+                    </div>
+                        <div class="col-12">
+                            <div class="form-group">
                                 <label for="first-name-vertical">No Telepon</label>
                                 <input type="text" id="first-name-vertical" class="form-control" name="hp"
                                     placeholder="Masukkan Nama Lengkap">

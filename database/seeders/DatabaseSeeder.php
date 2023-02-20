@@ -31,9 +31,10 @@ class DatabaseSeeder extends Seeder
 
         User::create([
             'outlet_id' => '1',
-            'level' => 'owner',
-            'username' => 'owner',
-            'password' => 'owner123',
+            'level' => 'admin',
+            'username' => 'admin',
+            'password' => bcrypt('password'),
+            'gambar' => '',
             'nama' => 'Achyara Narasya Marlanda',
         ]);
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PelangganController1;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LaporanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ route::group(['middleware' => ['auth', 'login:admin,kasir,owner']], function () 
 
 route::group(['middleware' => ['auth','login:admin']], function () {
 
+// Dashboard
 Route::get('/', [DashboardController::class, 'index']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
@@ -58,6 +60,11 @@ Route::resource('/pelanggan', PelangganController::class);
 // Transaksi
 Route::get('/transaksi', [TransaksiController::class, 'index']);
 Route::post('/store', [TransaksiController::class, 'store']);
+
+Route::get('/laporan', [LaporanController::class, 'index']);
+Route::get('/laporan/create', [LaporanController::class, 'create']);
+Route::resource('/laporan', LaporanController::class);
+
 });
 
 route::group(['middleware' => ['auth','login:kasir']], function () {

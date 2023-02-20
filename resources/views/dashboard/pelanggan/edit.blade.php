@@ -20,6 +20,15 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group">
+                        <select name="jk" id="" class="form-select">
+                            <option value="{{ $pelanggans->jk }}">{{ $pelanggans->jk }}</option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        </div>
+                    </div>
+                        <div class="col-12">
+                            <div class="form-group">
                                 <label for="first-name-vertical">No Telepon</label>
                                 <input type="number" id="first-name-vertical" class="form-control"
                                 value="{{ old('hp', $pelanggans->hp) }}"

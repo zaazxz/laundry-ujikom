@@ -44,6 +44,7 @@ class PelangganController extends Controller
     {
         $data = $request->validate([
             'nama' => 'required',
+            'jk' => 'required',
             'alamat' => 'required',
             'hp' => 'required',
         ]);
@@ -95,6 +96,7 @@ class PelangganController extends Controller
     {
         $rules = [
             'nama' => 'required',
+            'jk' => 'required',
             'alamat' => 'required',
             'hp' => 'required',
         ];

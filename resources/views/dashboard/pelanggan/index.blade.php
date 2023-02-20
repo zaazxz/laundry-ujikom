@@ -14,6 +14,7 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Lengkap</th>
+                            <th>Jenis Kelamin</th>
                             <th>Alamat</th>
                             <th>No Hp</th>
                             <th>Status</th>
@@ -24,6 +25,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $pelanggan->nama }}</td>
+                            <td>{{ $pelanggan->jk }}</td>
                             <td>{{ $pelanggan->alamat }}</td>
                             <td>{{ $pelanggan->hp }}</td>
                             <td>
@@ -68,13 +70,13 @@
     <script>
         //message with toastr
         @if(session()->has('success'))
-        
-            alert('{{ session('success') }}', 'BERHASIL!'); 
+
+            alert('{{ session('success') }}', 'BERHASIL!');
 
         @elseif(session()->has('error'))
 
-            alert('{{ session('error') }}', 'GAGAL!'); 
-            
+            alert('{{ session('error') }}', 'GAGAL!');
+
         @endif
     </script>
 @endsection
